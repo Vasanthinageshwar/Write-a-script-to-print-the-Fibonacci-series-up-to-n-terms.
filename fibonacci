@@ -1,0 +1,15 @@
+#!/bin/sh
+echo "Enter number of terms: "
+read n
+i=1
+a=0
+b=1
+echo "Fibonacci series: "
+while [ $i -le $n ]
+do
+	echo "$a"
+	next=`expr $a + $b`
+	a=$b
+	b=$next
+	i=`expr $i + 1`
+done
